@@ -3,25 +3,27 @@
 [zmengle](https://github.com/zmengle) 给 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）写的插件集合。
 DeepSeek Harness plugins by zmengle — each one is a standalone, installable `dsh` bundle.
 
-| 插件 | 一句话 | 仓库 |
-|---|---|---|
-| **dsh-plugin-sticky-wall** | 侧栏一块可自由摆放的便签墙，并给模型 4 个 `sticky_wall_*` 工具 | [dsh-plugin-sticky-wall](https://github.com/zmengle/dsh-plugin-sticky-wall) |
-| **dsh-plugin-artifacts** | 会话/共享产物的管理工作台：网格与列表、预览、重命名、回收站、zip 归档、可选 COS 上传 | [dsh-plugin-artifacts](https://github.com/zmengle/dsh-plugin-artifacts) |
-| **dsh-plugin-ark-image-gen** | 火山方舟 / 豆包 Seedream 生图：`ark_generate_image` + `ark_image_gen_status` 两个工具 | [dsh-plugin-ark-image-gen](https://github.com/zmengle/dsh-plugin-ark-image-gen) |
+| 插件 | 一句话 | npm | 仓库 |
+|---|---|---|---|
+| **dsh-plugin-sticky-wall** | 侧栏一块可自由摆放的便签墙（可折叠、带回收站），并给模型 5 个 `sticky_wall_*` 工具 | `1.4.0` | [repo](https://github.com/zmengle/dsh-plugin-sticky-wall) |
+| **dsh-plugin-artifacts** | 会话/共享产物的管理工作台：网格与列表、预览、重命名、回收站、zip 归档、可选 COS 上传 | `1.0.0` | [repo](https://github.com/zmengle/dsh-plugin-artifacts) |
+| **dsh-plugin-ark-image-gen** | 火山方舟 / 豆包 Seedream 生图：`ark_generate_image` + `ark_image_gen_status` 两个工具 | `0.1.1` | [repo](https://github.com/zmengle/dsh-plugin-ark-image-gen) |
 
 ## 安装
 
 ```sh
-# 从源码安装（GitHub）
+# 从 npm（推荐，一键、免构建）
+dsh plugin --profile web add dsh-plugin-sticky-wall
+dsh plugin --profile web add dsh-plugin-artifacts
+dsh plugin --profile web add dsh-plugin-ark-image-gen
+```
+
+也可以从源码装（跑最新 `main`）：
+
+```sh
 dsh plugin --profile web add git+https://github.com/zmengle/dsh-plugin-sticky-wall.git
 dsh plugin --profile web add git+https://github.com/zmengle/dsh-plugin-artifacts.git
 dsh plugin --profile web add git+https://github.com/zmengle/dsh-plugin-ark-image-gen.git
-```
-
-发布到 npm 后，也可以直接按包名安装：
-
-```sh
-dsh plugin --profile web add dsh-plugin-sticky-wall
 ```
 
 装完重启 `dsh web`（桌面端在设置 → 插件里能看到）。每个插件都声明了 `dsh.bundle.patch`，
