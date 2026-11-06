@@ -5,7 +5,7 @@ DeepSeek Harness plugins by zmengle — each one is a standalone, installable `d
 
 | 插件 | 一句话 | npm | 仓库 |
 |---|---|---|---|
-| **dsh-plugin-sticky-wall** | 侧栏一块可自由摆放的便签墙（可折叠、回收站、滚动到顶/到底），并给模型 5 个 `sticky_wall_*` 工具 | `1.7.0` | [repo](https://github.com/zmengle/dsh-plugin-sticky-wall) |
+| **dsh-plugin-sticky-wall** | 侧栏一块可自由摆放的便签墙（待办/列表、可折叠、回收站、滚动到顶/到底），给模型 5 个 `sticky_wall_*` 工具 | `1.7.1` | [repo](https://github.com/zmengle/dsh-plugin-sticky-wall) |
 | **dsh-plugin-artifacts** | 会话/共享产物的管理工作台：排序与时间分组、整理模式四角色、预览/重命名/回收站、zip 归档、可选 COS 上传 | `1.1.0` | [repo](https://github.com/zmengle/dsh-plugin-artifacts) |
 | **dsh-plugin-ark-image-gen** | 火山方舟 / 豆包 Seedream 生图：`ark_generate_image` + `ark_image_gen_status` 两个工具 | `0.1.1` | [repo](https://github.com/zmengle/dsh-plugin-ark-image-gen) |
 
